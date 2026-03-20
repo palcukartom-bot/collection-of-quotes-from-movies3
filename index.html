@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт By uglyfacekid</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 28px;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+        }
+
+        .tabs button {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .tabs button:hover {
+            background: #8A2BE2;
+        }
+
+        .tabs button.active {
+            background: #8A2BE2;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            margin: 20px auto;
+            width: 320px;
+            border-radius: 20px;
+        }
+
+        button.action {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #8A2BE2;
+            color: white;
+            cursor: pointer;
+        }
+
+        #quote {
+            font-style: italic;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Цитаты из фильмов</h1>
+    <p>Лучшие фразы из кино в одном месте</p>
+</section>
+
+<header>Мой сайт By uglyfacekid</header>
+
+<div class="tabs">
+    <button onclick="openTab('home', this)" class="active">Главная</button>
+    <button onclick="openTab('about', this)">О сайте</button>
+    <button onclick="openTab('fun', this)">Функции</button>
+    <button onclick="openTab('quotes', this)">Цитаты</button>
+</div>
+
+<!-- Главная -->
+<div id="home" class="content active">
+    <div class="card">
+        <h2>Добро пожаловать</h2>
+        <p id="mainText">Это мой сайт</p>
+        <button class="action" onclick="changeText()">Нажми на меня</button>
+    </div>
+</div>
+
+<!-- О сайте -->
+<div id="about" class="content">
+    <div class="card">
+        <h2>О сайте</h2>
+        <p>Этот сайт сделан на HTML + JavaScript</p>
+    </div>
+</div>
+
+<!-- Функции -->
+<div id="fun" class="content">
+    <div class="card">
+        <h2>Смена цвета</h2>
+        <button class="action" onclick="changeColor()">Сменить фон</button>
+    </div>
+
+    <div class="card">
+        <h2>Счётчик кликов</h2>
+        <p>Клики: <span id="counter">0</span></p>
+        <button class="action" onclick="clickCounter()">Клик</button>
+    </div>
+</div>
+
+<!-- Цитаты -->
+<div id="quotes" class="content">
+    <div class="card">
+
+        <h2>Цитаты из фильмов</h2>
+
+        <input
+                type="text"
+                id="search"
+                placeholder="Поиск цитаты..."
+                oninput="searchQuotes()"
+                style="padding:10px; width:80%; border-radius:10px; border:none;"
+        >
+
+        <p id="quote">Нажми кнопку</p>
+
+        <button class="action" onclick="newQuote()">Случайная цитата</button>
+
+        <div style="margin-top:10px;">
+            <button class="action" onclick="getQuote('action')">Боевики</button>
+            <button class="action" onclick="getQuote('drama')">Драма</button>
+            <button class="action" onclick="getQuote('comedy')">Комедия</button>
+            <button class="action" onclick="getQuote('fantasy')">Фэнтези</button>
+        </div>
+
+        <div id="results"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

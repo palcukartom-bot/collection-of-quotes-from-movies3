@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    padding: 20px;
+    font-size: 28px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    letter-spacing: 1px;
+}
+
+
+
+
+
+.tabs button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background: #8A2BE2;
+    transform: translateY(-2px);
+}
+
+.tabs button.active {
+    background: #8A2BE2;
+    color: white;
+}
+
+
+
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    margin: 20px auto;
+    width: 320px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+button.action {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #8A2BE2;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.action:hover {
+    background: #6a1bbd;
+    transform: scale(1.05);
+}
+
+input {
+    margin-top: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+#results {
+    margin-top: 15px;
+}
+
+
+
+.hero {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8A2BE2, #4B0082);
+    animation: gradientMove 6s infinite alternate;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero p {
+    opacity: 0.8;
+}
+
+@keyframes gradientMove {
+    0% { background: linear-gradient(135deg, #8A2BE2, #4B0082); }
+    100% { background: linear-gradient(135deg, #C8A2C8, #8A2BE2); }
+}
+
+
+
+body {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background-size: 400% 400%;
+    animation: bgMove 10s infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+
+button {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    transition: 0.3s;
+}
